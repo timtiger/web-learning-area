@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@规则</title>
+    <meta charset="utf-8"></meta>
+    <style>
+      @charset "UTF-8";
+      
+      @import url("title.css");
+
+      @media screen and (min-width: 1024px) {
+        .flex {
+          background-color: red;
+        }
+
+        .flex .one {
+          font-family: "Godzilla";
+          color: blue;
+        }
+      }
+
+      @supports (display: flex) {
+        .flex {
+          display: flex;
+          flex-direction: column;
+          animation-duration: 1s;
+          animation-name: slidein;
+        }
+      }
+
+      @keyframes slidein {
+        from {
+          transform: translateX(100%); 
+        }
+
+        to {
+          transform: translateX(0%);
+        }
+      }
+
+      @font-face {
+        font-family: "Godzilla";
+        src: url("./Godzilla.ttf");
+      }
+
+      @page {
+        margin: 5cm;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="title">
+        Demo Title
+      </div>
+      <div class="subtitle">
+        Demo Sub Title
+      </div>
+      <div class="content">
+        demo content
+      </div>
+    </article>
+
+    <button>Hover Me</button>
+
+    <div class="flex">
+      <div class="one">A test</div>
+      <div>B test</div>
+    </div>
+    
+  </body>
+</html>
